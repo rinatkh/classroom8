@@ -1,0 +1,9 @@
+UTC 2026-11-06T06:44:57.657266+00:00
+go version go1.22.12 linux/amd64
+linux
+amd64
+1
+Command: make bench-all BENCHTIME=30ms BENCHCOUNT=3 BENCHCPU=1
+Seed=7; b.N; -benchmem; no race/debug; fixed workload size.
+Shared host, no pinned frequency/core or exclusive CPU.
+CPU from go test: AMD EPYC 9V74 80-Core Processor

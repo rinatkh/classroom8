@@ -1,0 +1,396 @@
+make bench-list
+make[1]: Entering directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+go test ./internal/benchmark -run '^$' -bench '^BenchmarkList$' -benchmem -benchtime=30ms -count=3 -cpu=1
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkList/search-missing/slice/n=100         	 1079661	        32.68 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/slice/n=100         	 1000000	        34.93 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/slice/n=100         	 1000000	        36.52 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/linked/n=100        	  367706	       100.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/linked/n=100        	  361118	       101.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/linked/n=100        	  305206	       101.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/slice/n=100                   	 1000000	        36.72 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/slice/n=100                   	  990838	        35.69 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/slice/n=100                   	 1000000	        37.60 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/linked/n=100                  	  383589	        98.70 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/linked/n=100                  	  372363	        99.90 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/linked/n=100                  	  307183	        99.35 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/slice/n=1000        	  118777	       324.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/slice/n=1000        	  121984	       334.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/slice/n=1000        	  117792	       298.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/linked/n=1000       	   31472	      1167 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/linked/n=1000       	   30916	      1241 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/linked/n=1000       	   31356	      1181 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/slice/n=1000                  	   94220	       369.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/slice/n=1000                  	   83320	       381.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/slice/n=1000                  	  101965	       368.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/linked/n=1000                 	   29634	      1265 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/linked/n=1000                 	   28200	      1248 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/linked/n=1000                 	   28952	      1207 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/slice/n=10000       	   11416	      3359 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/slice/n=10000       	   10828	      3004 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/slice/n=10000       	   12608	      2972 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/linked/n=10000      	    2946	     11928 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/linked/n=10000      	    3217	     11568 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/search-missing/linked/n=10000      	    3205	     11835 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/slice/n=10000                 	   10000	      3296 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/slice/n=10000                 	   10000	      3310 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/slice/n=10000                 	   10000	      3491 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/linked/n=10000                	    2900	     12320 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/linked/n=10000                	    3058	     12065 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/walk/linked/n=10000                	    3019	     12258 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/build-append/slice/n=100           	  197548	       187.1 ns/op	     896 B/op	       1 allocs/op
+BenchmarkList/build-append/slice/n=100           	  194011	       182.6 ns/op	     896 B/op	       1 allocs/op
+BenchmarkList/build-append/slice/n=100           	  193653	       194.0 ns/op	     896 B/op	       1 allocs/op
+BenchmarkList/build-append/linked/n=100          	   10000	      3288 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkList/build-append/linked/n=100          	   10000	      3494 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkList/build-append/linked/n=100          	   10000	      3404 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkList/build-prepend/slice/n=100          	   25444	      1287 ns/op	     896 B/op	       1 allocs/op
+BenchmarkList/build-prepend/slice/n=100          	   25458	      1350 ns/op	     896 B/op	       1 allocs/op
+BenchmarkList/build-prepend/slice/n=100          	   26412	      1281 ns/op	     896 B/op	       1 allocs/op
+BenchmarkList/build-prepend/linked/n=100         	   10000	      3225 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkList/build-prepend/linked/n=100         	   10000	      3269 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkList/build-prepend/linked/n=100         	   10000	      3397 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkList/prepend-undo/slice/n=100           	 1234190	        35.01 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/prepend-undo/slice/n=100           	 1000000	        31.79 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/prepend-undo/slice/n=100           	 1000000	        30.44 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/prepend-undo/linked/n=100          	 1000000	        39.93 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/prepend-undo/linked/n=100          	 1000000	        40.79 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/prepend-undo/linked/n=100          	 1000000	        39.71 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/append-undo/slice/n=100            	14722089	         2.423 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/append-undo/slice/n=100            	14787618	         2.384 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/append-undo/slice/n=100            	15013117	         2.497 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/append-undo/linked/n=100           	 1000000	        40.61 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/append-undo/linked/n=100           	 1000000	        42.30 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/append-undo/linked/n=100           	 1000000	        40.24 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-known-undo/slice/n=100      	 1659691	        21.35 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-known-undo/slice/n=100      	 1635667	        21.11 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-known-undo/slice/n=100      	 1741840	        20.70 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-known-undo/linked/n=100     	 1000000	        42.45 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-known-undo/linked/n=100     	 1000000	        40.42 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-known-undo/linked/n=100     	 1000000	        41.89 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-index-undo/slice/n=100      	 1592719	        22.13 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-index-undo/slice/n=100      	 1725715	        22.16 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-index-undo/slice/n=100      	 1629110	        24.24 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-index-undo/linked/n=100     	  478353	        99.92 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-index-undo/linked/n=100     	  382134	        94.79 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-index-undo/linked/n=100     	  501051	        94.23 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/delete-value-last-restore/slice/n=100         	 1000000	        38.44 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/delete-value-last-restore/slice/n=100         	 1000000	        36.60 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/delete-value-last-restore/slice/n=100         	  939380	        37.49 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/delete-value-last-restore/linked/n=100        	  262810	       165.8 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/delete-value-last-restore/linked/n=100        	  250524	       164.0 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/delete-value-last-restore/linked/n=100        	  222699	       165.5 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/build-append/slice/n=1000                     	   19159	      1773 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkList/build-append/slice/n=1000                     	   19965	      1766 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkList/build-append/slice/n=1000                     	   20475	      1716 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkList/build-append/linked/n=1000                    	    1268	     34953 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkList/build-append/linked/n=1000                    	    1282	     44315 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkList/build-append/linked/n=1000                    	    1123	     35023 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkList/build-prepend/slice/n=1000                    	     757	     47707 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkList/build-prepend/slice/n=1000                    	     716	     47979 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkList/build-prepend/slice/n=1000                    	     758	     50133 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkList/build-prepend/linked/n=1000                   	    1292	     32575 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkList/build-prepend/linked/n=1000                   	    1400	     31998 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkList/build-prepend/linked/n=1000                   	    1185	     31587 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkList/prepend-undo/slice/n=1000                     	  225162	       168.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/prepend-undo/slice/n=1000                     	  205359	       158.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/prepend-undo/slice/n=1000                     	  233740	       158.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/prepend-undo/linked/n=1000                    	 1000000	        39.81 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/prepend-undo/linked/n=1000                    	 1000000	        42.69 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/prepend-undo/linked/n=1000                    	 1000000	        39.70 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/append-undo/slice/n=1000                      	14785735	         2.430 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/append-undo/slice/n=1000                      	15024790	         2.461 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/append-undo/slice/n=1000                      	15270925	         2.490 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/append-undo/linked/n=1000                     	 1000000	        42.09 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/append-undo/linked/n=1000                     	 1000000	        43.20 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/append-undo/linked/n=1000                     	 1000000	        44.31 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-known-undo/slice/n=1000                	  374473	        88.47 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-known-undo/slice/n=1000                	  396974	        88.72 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-known-undo/slice/n=1000                	  372865	        94.48 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-known-undo/linked/n=1000               	 1000000	        45.03 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-known-undo/linked/n=1000               	 1000000	        45.69 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-known-undo/linked/n=1000               	 1000000	        43.40 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-index-undo/slice/n=1000                	  339555	        95.47 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-index-undo/slice/n=1000                	  430786	        89.76 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-index-undo/slice/n=1000                	  423922	        86.29 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/middle-index-undo/linked/n=1000               	   61497	       628.4 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-index-undo/linked/n=1000               	   61552	       595.1 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/middle-index-undo/linked/n=1000               	   61068	       613.2 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/delete-value-last-restore/slice/n=1000        	  112202	       318.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/delete-value-last-restore/slice/n=1000        	   94719	       318.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/delete-value-last-restore/slice/n=1000        	  117816	       309.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkList/delete-value-last-restore/linked/n=1000       	   27651	      1247 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/delete-value-last-restore/linked/n=1000       	   25429	      2179 ns/op	      24 B/op	       1 allocs/op
+BenchmarkList/delete-value-last-restore/linked/n=1000       	   28105	      1314 ns/op	      24 B/op	       1 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	5.379s
+make[1]: Leaving directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+make bench-stack
+make[1]: Entering directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+go test ./internal/benchmark -run '^$' -bench '^BenchmarkStack$' -benchmem -benchtime=30ms -count=3 -cpu=1
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkStack/push-pop/slice/n=32         	  164430	       194.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/slice/n=32         	  223910	       161.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/slice/n=32         	  239342	       197.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/linked/n=32        	   23953	      1779 ns/op	     768 B/op	      32 allocs/op
+BenchmarkStack/push-pop/linked/n=32        	   23330	      1779 ns/op	     768 B/op	      32 allocs/op
+BenchmarkStack/push-pop/linked/n=32        	   25998	      1306 ns/op	     768 B/op	      32 allocs/op
+BenchmarkStack/push-pop/slice/n=256        	   28504	      1282 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/slice/n=256        	   27716	      1291 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/slice/n=256        	   27769	      1283 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/linked/n=256       	    4269	     10975 ns/op	    6144 B/op	     256 allocs/op
+BenchmarkStack/push-pop/linked/n=256       	    5156	     10999 ns/op	    6144 B/op	     256 allocs/op
+BenchmarkStack/push-pop/linked/n=256       	    4908	     11114 ns/op	    6144 B/op	     256 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	0.605s
+make[1]: Leaving directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+make bench-queue
+make[1]: Entering directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+go test ./internal/benchmark -run '^$' -bench '^BenchmarkQueue$' -benchmem -benchtime=30ms -count=3 -cpu=1
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkQueue/64-pairs/slice-shift/n=100         	   33664	      1059 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=100         	   35408	      1018 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=100         	   36918	       965.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/linked/n=100              	   14702	      2802 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/linked/n=100              	   10000	      3037 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/linked/n=100              	   10000	      4185 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/ring/n=100                	  110227	       419.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/ring/n=100                	  109732	       321.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/ring/n=100                	  114270	       352.6 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=1000        	    7392	      5482 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=1000        	    7075	      5486 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=1000        	    6930	      6215 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/linked/n=1000             	   10000	      3234 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/linked/n=1000             	   10000	      3007 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/linked/n=1000             	   10000	      3400 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/ring/n=1000               	  104211	       374.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/ring/n=1000               	   84100	       375.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/ring/n=1000               	   89127	       415.0 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	0.802s
+make[1]: Leaving directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+make bench-hash
+make[1]: Entering directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+go test ./internal/benchmark -run '^$' -bench '^BenchmarkHash$' -benchmem -benchtime=30ms -count=3 -cpu=1
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkHash/build/custom/n=100         	    3835	     11815 ns/op	    9296 B/op	     108 allocs/op
+BenchmarkHash/build/custom/n=100         	    5035	      8340 ns/op	    9296 B/op	     108 allocs/op
+BenchmarkHash/build/custom/n=100         	    3571	      8782 ns/op	    9296 B/op	     108 allocs/op
+BenchmarkHash/build/map/n=100            	    4536	      7835 ns/op	    8075 B/op	       9 allocs/op
+BenchmarkHash/build/map/n=100            	    6193	      7052 ns/op	    8072 B/op	       9 allocs/op
+BenchmarkHash/build/map/n=100            	    7228	      7233 ns/op	    8073 B/op	       9 allocs/op
+BenchmarkHash/build/slice/n=100          	   46870	       657.8 ns/op	    2688 B/op	       1 allocs/op
+BenchmarkHash/build/slice/n=100          	   54494	       664.2 ns/op	    2688 B/op	       1 allocs/op
+BenchmarkHash/build/slice/n=100          	   44342	      1065 ns/op	    2688 B/op	       1 allocs/op
+BenchmarkHash/lookup-last/custom/n=100   	 2344196	        14.96 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/custom/n=100   	 2384781	        15.03 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/custom/n=100   	 2393250	        16.62 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/map/n=100      	 3614254	        11.21 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/map/n=100      	 3905907	        12.03 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/map/n=100      	 2646166	        13.11 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/slice/n=100    	   87552	       513.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/slice/n=100    	   46088	       750.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/slice/n=100    	   76885	       446.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/custom/n=100         	 2150187	        16.08 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/custom/n=100         	 2661346	        12.07 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/custom/n=100         	 2885738	        12.34 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/map/n=100            	 2911560	        13.46 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/map/n=100            	 2497330	        12.97 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/map/n=100            	 2740680	        13.25 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/slice/n=100          	  107636	       310.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/slice/n=100          	  126271	       311.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/slice/n=100          	  109746	       304.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/custom/n=100         	  452101	        75.57 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/insert-read-delete-triple/custom/n=100         	  545102	        75.64 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/insert-read-delete-triple/custom/n=100         	  465249	        76.98 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/insert-read-delete-triple/map/n=100            	 1204839	        31.60 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/map/n=100            	 1000000	        39.37 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/map/n=100            	 1000000	        43.02 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/slice/n=100          	  115639	       311.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/slice/n=100          	  123645	       296.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/slice/n=100          	  103118	       311.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/custom/n=100               	  609518	        64.09 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/delete-restore-pair/custom/n=100               	  562486	        64.82 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/delete-restore-pair/custom/n=100               	  666649	        64.98 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/delete-restore-pair/map/n=100                  	 1379532	        26.29 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/map/n=100                  	 1453736	        27.30 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/map/n=100                  	 1651576	        28.05 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/slice/n=100                	  103740	       353.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/slice/n=100                	   98091	       366.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/slice/n=100                	  101313	       354.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/build/custom/n=1000                            	     404	     79982 ns/op	   85264 B/op	    1011 allocs/op
+BenchmarkHash/build/custom/n=1000                            	     422	     75761 ns/op	   85264 B/op	    1011 allocs/op
+BenchmarkHash/build/custom/n=1000                            	     477	     79008 ns/op	   85264 B/op	    1011 allocs/op
+BenchmarkHash/build/map/n=1000                               	     415	     84059 ns/op	  122350 B/op	      41 allocs/op
+BenchmarkHash/build/map/n=1000                               	     409	     89143 ns/op	  122392 B/op	      41 allocs/op
+BenchmarkHash/build/map/n=1000                               	     388	    103096 ns/op	  122400 B/op	      41 allocs/op
+BenchmarkHash/build/slice/n=1000                             	    9690	      6631 ns/op	   24576 B/op	       1 allocs/op
+BenchmarkHash/build/slice/n=1000                             	    9552	      6679 ns/op	   24576 B/op	       1 allocs/op
+BenchmarkHash/build/slice/n=1000                             	    8821	      6928 ns/op	   24576 B/op	       1 allocs/op
+BenchmarkHash/lookup-last/custom/n=1000                      	 2620152	        13.71 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/custom/n=1000                      	 2687868	        13.15 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/custom/n=1000                      	 2620363	        13.27 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/map/n=1000                         	 3585314	        12.10 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/map/n=1000                         	 3546554	         9.561 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/map/n=1000                         	 3587013	         9.297 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/slice/n=1000                       	    9511	      3980 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/slice/n=1000                       	   10000	      4223 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/slice/n=1000                       	   10000	      3840 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/custom/n=1000                   	 2665492	        12.56 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/custom/n=1000                   	 2858283	        12.56 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/custom/n=1000                   	 2702550	        13.53 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/map/n=1000                      	 2908236	        13.24 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/map/n=1000                      	 2704653	        13.47 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/map/n=1000                      	 3043768	        14.57 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/slice/n=1000                    	   10000	      3279 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/slice/n=1000                    	   10411	      3637 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/slice/n=1000                    	   10000	      3271 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/custom/n=1000        	  367707	        87.52 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/insert-read-delete-triple/custom/n=1000        	  528124	        90.96 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/insert-read-delete-triple/custom/n=1000        	  531222	        83.87 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/insert-read-delete-triple/map/n=1000           	 1250134	        33.94 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/map/n=1000           	 1225893	        36.15 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/map/n=1000           	 1215390	        34.74 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/slice/n=1000         	   10000	      3416 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/slice/n=1000         	   10000	      3253 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/slice/n=1000         	   10000	      3470 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/custom/n=1000              	  477765	        85.01 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/delete-restore-pair/custom/n=1000              	  632012	        78.84 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/delete-restore-pair/custom/n=1000              	  429104	        79.82 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/delete-restore-pair/map/n=1000                 	 1347130	        25.70 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/map/n=1000                 	 1486346	        25.74 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/map/n=1000                 	 1459063	        24.05 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/slice/n=1000               	    8824	      3596 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/slice/n=1000               	   10000	      3969 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/slice/n=1000               	    9756	      3616 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/build/custom/n=10000                           	      27	   1255672 ns/op	  746640 B/op	   10014 allocs/op
+BenchmarkHash/build/custom/n=10000                           	      55	   1218115 ns/op	  746640 B/op	   10014 allocs/op
+BenchmarkHash/build/custom/n=10000                           	      42	   1291558 ns/op	  746640 B/op	   10014 allocs/op
+BenchmarkHash/build/map/n=10000                              	      49	   1296224 ns/op	  974864 B/op	     283 allocs/op
+BenchmarkHash/build/map/n=10000                              	      52	   1278987 ns/op	  974540 B/op	     281 allocs/op
+BenchmarkHash/build/map/n=10000                              	      49	   1356748 ns/op	  974987 B/op	     283 allocs/op
+BenchmarkHash/build/slice/n=10000                            	     267	    120786 ns/op	  245760 B/op	       1 allocs/op
+BenchmarkHash/build/slice/n=10000                            	     298	    122009 ns/op	  245760 B/op	       1 allocs/op
+BenchmarkHash/build/slice/n=10000                            	     288	    122640 ns/op	  245760 B/op	       1 allocs/op
+BenchmarkHash/lookup-last/custom/n=10000                     	 2371951	        15.00 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/custom/n=10000                     	 2648666	        13.21 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/custom/n=10000                     	 1000000	        31.46 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/map/n=10000                        	 3292027	         9.340 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/map/n=10000                        	 3463819	         9.974 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/map/n=10000                        	 3927814	        10.43 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/slice/n=10000                      	     636	     47850 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/slice/n=10000                      	    1083	     39661 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-last/slice/n=10000                      	     878	     41145 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/custom/n=10000                  	 2726896	        14.93 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/custom/n=10000                  	 2767485	        12.63 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/custom/n=10000                  	 2761518	        12.53 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/map/n=10000                     	 2831448	        13.45 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/map/n=10000                     	 2532242	        13.64 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/map/n=10000                     	 2440168	        15.19 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/slice/n=10000                   	    1092	     34661 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/slice/n=10000                   	    1244	     31275 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/lookup-missing/slice/n=10000                   	    1260	     32984 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/custom/n=10000       	  343611	       106.7 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/insert-read-delete-triple/custom/n=10000       	  381555	        91.81 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/insert-read-delete-triple/custom/n=10000       	  374164	        95.27 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/insert-read-delete-triple/map/n=10000          	  970302	        33.84 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/map/n=10000          	 1000000	        36.30 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/map/n=10000          	 1204693	        29.78 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/slice/n=10000        	    1039	     29629 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/slice/n=10000        	    1147	     29796 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/insert-read-delete-triple/slice/n=10000        	    1096	     29994 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/custom/n=10000             	  441070	        79.33 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/delete-restore-pair/custom/n=10000             	  480506	        79.78 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/delete-restore-pair/custom/n=10000             	  420147	        78.56 ns/op	      48 B/op	       1 allocs/op
+BenchmarkHash/delete-restore-pair/map/n=10000                	  924933	        33.25 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/map/n=10000                	 1558603	        23.65 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/map/n=10000                	 1308328	        23.56 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/slice/n=10000              	     999	     37108 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/slice/n=10000              	     970	     35129 ns/op	       0 B/op	       0 allocs/op
+BenchmarkHash/delete-restore-pair/slice/n=10000              	     978	     35177 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	7.305s
+make[1]: Leaving directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+make bench-buffer
+make[1]: Entering directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+go test ./internal/benchmark -run '^$' -bench '^BenchmarkBuffer$' -benchmem -benchtime=30ms -count=3 -cpu=1
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkBuffer/accumulate/append/chunks=100         	   36326	       891.8 ns/op	    5360 B/op	       9 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=100         	   35731	       905.3 ns/op	    5360 B/op	       9 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=100         	   36148	       916.9 ns/op	    5360 B/op	       9 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=100   	   33050	      1040 ns/op	    4080 B/op	       7 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=100   	   31936	      1002 ns/op	    4080 B/op	       7 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=100   	   31610	      1084 ns/op	    4080 B/op	       7 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=100         	   24510	      1745 ns/op	    5392 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=100         	   21909	      1528 ns/op	    5392 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=100         	   25376	      1563 ns/op	    5392 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=1000        	    4075	      8854 ns/op	   62960 B/op	      16 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=1000        	    4063	      9050 ns/op	   62960 B/op	      16 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=1000        	    3836	      9444 ns/op	   62960 B/op	      16 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=1000  	    4363	      7796 ns/op	   32752 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=1000  	    4054	      7784 ns/op	   32752 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=1000  	    4212	      8134 ns/op	   32752 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=1000        	    2846	     12991 ns/op	   62992 B/op	      17 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=1000        	    2620	     14355 ns/op	   62992 B/op	      17 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=1000        	    2650	     13531 ns/op	   62992 B/op	      17 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=32          	  140592	       279.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=32          	  136833	       267.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=32          	  146220	       272.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=1024        	  134541	       277.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=1024        	  137234	       272.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=1024        	  140155	       265.3 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	1.312s
+make[1]: Leaving directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+make bench-memory
+make[1]: Entering directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'
+go test ./internal/benchmark -run '^$' -bench '^BenchmarkMemory$' -benchmem -benchtime=30ms -count=3 -cpu=1
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkMemory/slice-build/n=100         	  330871	       108.5 ns/op	     896 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=100         	  338078	       113.9 ns/op	     896 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=100         	  346408	       104.5 ns/op	     896 B/op	       1 allocs/op
+BenchmarkMemory/singly-build/n=100        	   10000	      3301 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkMemory/singly-build/n=100        	   10000	      3313 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkMemory/singly-build/n=100        	   10000	      3477 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkMemory/std-doubly-build/n=100    	    7408	      5418 ns/op	    5648 B/op	     201 allocs/op
+BenchmarkMemory/std-doubly-build/n=100    	   10000	      5643 ns/op	    5648 B/op	     201 allocs/op
+BenchmarkMemory/std-doubly-build/n=100    	    9687	      7723 ns/op	    5648 B/op	     201 allocs/op
+BenchmarkMemory/slice-build/n=1000        	   42820	       758.0 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=1000        	   43906	       753.7 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=1000        	   43504	       769.8 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkMemory/singly-build/n=1000       	    1368	     34575 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkMemory/singly-build/n=1000       	    1521	     35235 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkMemory/singly-build/n=1000       	    1251	     32715 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkMemory/std-doubly-build/n=1000   	     621	     57205 ns/op	   56048 B/op	    2001 allocs/op
+BenchmarkMemory/std-doubly-build/n=1000   	     658	     58127 ns/op	   56048 B/op	    2001 allocs/op
+BenchmarkMemory/std-doubly-build/n=1000   	     658	     68200 ns/op	   56048 B/op	    2001 allocs/op
+BenchmarkMemory/slice-build/n=10000       	    4021	      8038 ns/op	   81920 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=10000       	    4117	     11225 ns/op	   81920 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=10000       	    4542	      7742 ns/op	   81920 B/op	       1 allocs/op
+BenchmarkMemory/singly-build/n=10000      	     100	    360278 ns/op	  240024 B/op	   10001 allocs/op
+BenchmarkMemory/singly-build/n=10000      	     100	    367076 ns/op	  240024 B/op	   10001 allocs/op
+BenchmarkMemory/singly-build/n=10000      	      93	    389434 ns/op	  240024 B/op	   10001 allocs/op
+BenchmarkMemory/std-doubly-build/n=10000  	     100	    777556 ns/op	  560040 B/op	   20000 allocs/op
+BenchmarkMemory/std-doubly-build/n=10000  	     100	    760899 ns/op	  560041 B/op	   20000 allocs/op
+BenchmarkMemory/std-doubly-build/n=10000  	     100	    762803 ns/op	  560040 B/op	   20000 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	1.560s
+make[1]: Leaving directory '/workspace/scratch/6a155dd83f26/lesson8-work/lesson8/classroom8'

@@ -1,0 +1,30 @@
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor
+BenchmarkBuffer/accumulate/append/chunks=100         	   23659	       949.3 ns/op	    5360 B/op	       9 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=100         	   24997	      1135 ns/op	    5360 B/op	       9 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=100         	   22215	       943.9 ns/op	    5360 B/op	       9 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=100   	   19116	      1141 ns/op	    4080 B/op	       7 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=100   	   19674	      1163 ns/op	    4080 B/op	       7 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=100   	   19866	      1190 ns/op	    4080 B/op	       7 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=100         	   16050	      1533 ns/op	    5392 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=100         	   13680	      1596 ns/op	    5392 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=100         	   14722	      1741 ns/op	    5392 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=1000        	    2038	     10420 ns/op	   62960 B/op	      16 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=1000        	    2222	     10030 ns/op	   62960 B/op	      16 allocs/op
+BenchmarkBuffer/accumulate/append/chunks=1000        	    2215	     14031 ns/op	   62960 B/op	      16 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=1000  	    3030	      8653 ns/op	   32752 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=1000  	    2720	      8604 ns/op	   32752 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/bytes-buffer/chunks=1000  	    2529	      8936 ns/op	   32752 B/op	      10 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=1000        	    1617	     13354 ns/op	   62992 B/op	      17 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=1000        	    1478	     14150 ns/op	   62992 B/op	      17 allocs/op
+BenchmarkBuffer/accumulate/linear/chunks=1000        	    1818	     16755 ns/op	   62992 B/op	      17 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=32          	   89923	       294.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=32          	   94135	       275.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=32          	   91796	       269.6 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=1024        	   89114	       257.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=1024        	   87256	       272.6 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBuffer/ring-cyclic-64-pairs/cap=1024        	   86016	       265.6 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	0.965s

@@ -1,0 +1,24 @@
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor
+BenchmarkQueue/64-pairs/slice-shift/n=100         	   22716	      1045 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=100         	   24577	      1036 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=100         	   23253	      1051 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/linked/n=100              	   10790	      2909 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/linked/n=100              	   10000	      2900 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/linked/n=100              	   10000	      2979 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/ring/n=100                	   72081	       389.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/ring/n=100                	   78698	       318.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/ring/n=100                	   76365	       306.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=1000        	    4786	      5181 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=1000        	    4995	      5219 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/slice-shift/n=1000        	    3954	      5450 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/linked/n=1000             	   10000	      2767 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/linked/n=1000             	   10000	      2817 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/linked/n=1000             	   10000	      3036 ns/op	    1536 B/op	      64 allocs/op
+BenchmarkQueue/64-pairs/ring/n=1000               	   71454	       331.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/ring/n=1000               	   74170	       325.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkQueue/64-pairs/ring/n=1000               	   78630	       330.0 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	0.600s

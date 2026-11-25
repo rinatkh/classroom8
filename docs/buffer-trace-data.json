@@ -1,0 +1,140 @@
+[
+  {
+    "Title": "Пустой Linear",
+    "Note": "len=0, capacity=0; память под данные ещё не выделена",
+    "Values": null,
+    "Links": null,
+    "Head": 0,
+    "Tail": 0,
+    "Previous": 0,
+    "Current": 0,
+    "Size": 0,
+    "Capacity": 0,
+    "Buckets": null
+  },
+  {
+    "Title": "Write(Go )",
+    "Note": "Байты скопированы в собственный буфер; capacity может быть больше len",
+    "Values": [
+      71,
+      111,
+      32
+    ],
+    "Links": null,
+    "Head": 0,
+    "Tail": 0,
+    "Previous": 0,
+    "Current": 0,
+    "Size": 3,
+    "Capacity": 8,
+    "Buckets": null
+  },
+  {
+    "Title": "Write(API)",
+    "Note": "Накоплен весь payload; это растущий буфер, а не bounded ring",
+    "Values": [
+      71,
+      111,
+      32,
+      65,
+      80,
+      73
+    ],
+    "Links": null,
+    "Head": 0,
+    "Tail": 0,
+    "Previous": 0,
+    "Current": 0,
+    "Size": 6,
+    "Capacity": 8,
+    "Buckets": null
+  },
+  {
+    "Title": "Read(3) → Go ",
+    "Note": "Остался непрочитанный API; backing array и capacity продолжают существовать",
+    "Values": [
+      65,
+      80,
+      73
+    ],
+    "Links": null,
+    "Head": 0,
+    "Tail": 0,
+    "Previous": 0,
+    "Current": 0,
+    "Size": 3,
+    "Capacity": 8,
+    "Buckets": null
+  },
+  {
+    "Title": "Write(12 байт)",
+    "Note": "При нехватке места возможны compaction и новый массив; capacity взята из реального Go-вызова",
+    "Values": [
+      65,
+      80,
+      73,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108
+    ],
+    "Links": null,
+    "Head": 0,
+    "Tail": 0,
+    "Previous": 0,
+    "Current": 0,
+    "Size": 15,
+    "Capacity": 16,
+    "Buckets": null
+  },
+  {
+    "Title": "Reset()",
+    "Note": "Непрочитанных данных нет, но capacity сохранена: len=0 не означает освобождение массива",
+    "Values": null,
+    "Links": null,
+    "Head": 0,
+    "Tail": 0,
+    "Previous": 0,
+    "Current": 0,
+    "Size": 0,
+    "Capacity": 16,
+    "Buckets": null
+  },
+  {
+    "Title": "Write(OK)",
+    "Note": "Повторно используется сохранённая ёмкость",
+    "Values": [
+      79,
+      75
+    ],
+    "Links": null,
+    "Head": 0,
+    "Tail": 0,
+    "Previous": 0,
+    "Current": 0,
+    "Size": 2,
+    "Capacity": 16,
+    "Buckets": null
+  },
+  {
+    "Title": "Read(2) → OK",
+    "Note": "Все данные прочитаны; capacity остаётся для следующих записей",
+    "Values": null,
+    "Links": null,
+    "Head": 0,
+    "Tail": 0,
+    "Previous": 0,
+    "Current": 0,
+    "Size": 0,
+    "Capacity": 16,
+    "Buckets": null
+  }
+]

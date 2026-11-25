@@ -1,0 +1,18 @@
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor
+BenchmarkStack/push-pop/slice/n=32         	  128400	       234.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/slice/n=32         	  159259	       159.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/slice/n=32         	  140972	       155.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/linked/n=32        	   19268	      1182 ns/op	     768 B/op	      32 allocs/op
+BenchmarkStack/push-pop/linked/n=32        	   17948	      1443 ns/op	     768 B/op	      32 allocs/op
+BenchmarkStack/push-pop/linked/n=32        	   16300	      1387 ns/op	     768 B/op	      32 allocs/op
+BenchmarkStack/push-pop/slice/n=256        	   18784	      1414 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/slice/n=256        	   18583	      1266 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/slice/n=256        	   19462	      1243 ns/op	       0 B/op	       0 allocs/op
+BenchmarkStack/push-pop/linked/n=256       	    2809	     11088 ns/op	    6144 B/op	     256 allocs/op
+BenchmarkStack/push-pop/linked/n=256       	    3195	     11723 ns/op	    6144 B/op	     256 allocs/op
+BenchmarkStack/push-pop/linked/n=256       	    3357	     10381 ns/op	    6144 B/op	     256 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	0.450s

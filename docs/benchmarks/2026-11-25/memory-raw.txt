@@ -1,0 +1,33 @@
+goos: linux
+goarch: amd64
+pkg: github.com/rinatkh/classroom8/internal/benchmark
+cpu: AMD EPYC 9V74 80-Core Processor
+BenchmarkMemory/slice-build/n=100         	  209887	       113.5 ns/op	     896 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=100         	  188379	       115.0 ns/op	     896 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=100         	  245754	       109.3 ns/op	     896 B/op	       1 allocs/op
+BenchmarkMemory/singly-build/n=100        	    9189	      3650 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkMemory/singly-build/n=100        	    9355	      3876 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkMemory/singly-build/n=100        	   10000	      3745 ns/op	    2424 B/op	     101 allocs/op
+BenchmarkMemory/std-doubly-build/n=100    	    5095	      5856 ns/op	    5648 B/op	     201 allocs/op
+BenchmarkMemory/std-doubly-build/n=100    	    6466	      5616 ns/op	    5648 B/op	     201 allocs/op
+BenchmarkMemory/std-doubly-build/n=100    	    4404	      5932 ns/op	    5648 B/op	     201 allocs/op
+BenchmarkMemory/slice-build/n=1000        	   30009	       779.2 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=1000        	   30424	       723.0 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=1000        	   33908	       760.5 ns/op	    8192 B/op	       1 allocs/op
+BenchmarkMemory/singly-build/n=1000       	     811	     37844 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkMemory/singly-build/n=1000       	     885	     34439 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkMemory/singly-build/n=1000       	     736	     32633 ns/op	   24024 B/op	    1001 allocs/op
+BenchmarkMemory/std-doubly-build/n=1000   	     426	     55943 ns/op	   56048 B/op	    2001 allocs/op
+BenchmarkMemory/std-doubly-build/n=1000   	     415	     57977 ns/op	   56048 B/op	    2001 allocs/op
+BenchmarkMemory/std-doubly-build/n=1000   	     432	     58495 ns/op	   56048 B/op	    2001 allocs/op
+BenchmarkMemory/slice-build/n=10000       	    2772	      8163 ns/op	   81920 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=10000       	    2462	      8935 ns/op	   81920 B/op	       1 allocs/op
+BenchmarkMemory/slice-build/n=10000       	    2842	      8852 ns/op	   81920 B/op	       1 allocs/op
+BenchmarkMemory/singly-build/n=10000      	      88	    381938 ns/op	  240024 B/op	   10001 allocs/op
+BenchmarkMemory/singly-build/n=10000      	     100	    382301 ns/op	  240024 B/op	   10001 allocs/op
+BenchmarkMemory/singly-build/n=10000      	     100	    391245 ns/op	  240024 B/op	   10001 allocs/op
+BenchmarkMemory/std-doubly-build/n=10000  	      70	    790751 ns/op	  560040 B/op	   20000 allocs/op
+BenchmarkMemory/std-doubly-build/n=10000  	      55	    872560 ns/op	  560041 B/op	   20000 allocs/op
+BenchmarkMemory/std-doubly-build/n=10000  	      69	    794420 ns/op	  560041 B/op	   20000 allocs/op
+PASS
+ok  	github.com/rinatkh/classroom8/internal/benchmark	1.057s

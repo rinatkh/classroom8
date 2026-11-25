@@ -1,0 +1,200 @@
+[
+  {
+    "benchtime": "20ms",
+    "command": [
+      "go",
+      "test",
+      "./internal/benchmark",
+      "-run",
+      "^$",
+      "-bench",
+      "^BenchmarkList$",
+      "-benchmem",
+      "-benchtime=20ms",
+      "-count=3",
+      "-cpu=1"
+    ],
+    "count": 3,
+    "cpu": "1",
+    "environment": {
+      "GOOS": "linux",
+      "GOARCH": "amd64",
+      "Package": "github.com/rinatkh/classroom8/internal/benchmark",
+      "CPU": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "finished_at": "2026-11-25T17:17:57Z",
+    "go_version": "go version go1.22.12 linux/amd64",
+    "int_bytes": 8,
+    "kind": "list",
+    "operation": "",
+    "size": 0,
+    "started_at": "2026-11-25T17:17:53Z",
+    "state": "success",
+    "view": "full"
+  },
+  {
+    "benchtime": "20ms",
+    "command": [
+      "go",
+      "test",
+      "./internal/benchmark",
+      "-run",
+      "^$",
+      "-bench",
+      "^BenchmarkStack$",
+      "-benchmem",
+      "-benchtime=20ms",
+      "-count=3",
+      "-cpu=1"
+    ],
+    "count": 3,
+    "cpu": "1",
+    "environment": {
+      "GOOS": "linux",
+      "GOARCH": "amd64",
+      "Package": "github.com/rinatkh/classroom8/internal/benchmark",
+      "CPU": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "finished_at": "2026-11-25T17:17:58Z",
+    "go_version": "go version go1.22.12 linux/amd64",
+    "int_bytes": 8,
+    "kind": "stack",
+    "operation": "",
+    "size": 0,
+    "started_at": "2026-11-25T17:17:57Z",
+    "state": "success",
+    "view": "full"
+  },
+  {
+    "benchtime": "20ms",
+    "command": [
+      "go",
+      "test",
+      "./internal/benchmark",
+      "-run",
+      "^$",
+      "-bench",
+      "^BenchmarkQueue$",
+      "-benchmem",
+      "-benchtime=20ms",
+      "-count=3",
+      "-cpu=1"
+    ],
+    "count": 3,
+    "cpu": "1",
+    "environment": {
+      "GOOS": "linux",
+      "GOARCH": "amd64",
+      "Package": "github.com/rinatkh/classroom8/internal/benchmark",
+      "CPU": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "finished_at": "2026-11-25T17:17:59Z",
+    "go_version": "go version go1.22.12 linux/amd64",
+    "int_bytes": 8,
+    "kind": "queue",
+    "operation": "",
+    "size": 0,
+    "started_at": "2026-11-25T17:17:58Z",
+    "state": "success",
+    "view": "full"
+  },
+  {
+    "benchtime": "20ms",
+    "command": [
+      "go",
+      "test",
+      "./internal/benchmark",
+      "-run",
+      "^$",
+      "-bench",
+      "^BenchmarkHash$",
+      "-benchmem",
+      "-benchtime=20ms",
+      "-count=3",
+      "-cpu=1"
+    ],
+    "count": 3,
+    "cpu": "1",
+    "environment": {
+      "GOOS": "linux",
+      "GOARCH": "amd64",
+      "Package": "github.com/rinatkh/classroom8/internal/benchmark",
+      "CPU": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "finished_at": "2026-11-25T17:18:04Z",
+    "go_version": "go version go1.22.12 linux/amd64",
+    "int_bytes": 8,
+    "kind": "hash",
+    "operation": "",
+    "size": 0,
+    "started_at": "2026-11-25T17:17:59Z",
+    "state": "success",
+    "view": "full"
+  },
+  {
+    "benchtime": "20ms",
+    "command": [
+      "go",
+      "test",
+      "./internal/benchmark",
+      "-run",
+      "^$",
+      "-bench",
+      "^BenchmarkBuffer$",
+      "-benchmem",
+      "-benchtime=20ms",
+      "-count=3",
+      "-cpu=1"
+    ],
+    "count": 3,
+    "cpu": "1",
+    "environment": {
+      "GOOS": "linux",
+      "GOARCH": "amd64",
+      "Package": "github.com/rinatkh/classroom8/internal/benchmark",
+      "CPU": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "finished_at": "2026-11-25T17:18:05Z",
+    "go_version": "go version go1.22.12 linux/amd64",
+    "int_bytes": 8,
+    "kind": "buffer",
+    "operation": "",
+    "size": 0,
+    "started_at": "2026-11-25T17:18:04Z",
+    "state": "success",
+    "view": "full"
+  },
+  {
+    "benchtime": "20ms",
+    "command": [
+      "go",
+      "test",
+      "./internal/benchmark",
+      "-run",
+      "^$",
+      "-bench",
+      "^BenchmarkMemory$",
+      "-benchmem",
+      "-benchtime=20ms",
+      "-count=3",
+      "-cpu=1"
+    ],
+    "count": 3,
+    "cpu": "1",
+    "environment": {
+      "GOOS": "linux",
+      "GOARCH": "amd64",
+      "Package": "github.com/rinatkh/classroom8/internal/benchmark",
+      "CPU": "AMD EPYC 9V74 80-Core Processor"
+    },
+    "finished_at": "2026-11-25T17:18:07Z",
+    "go_version": "go version go1.22.12 linux/amd64",
+    "int_bytes": 8,
+    "kind": "memory",
+    "operation": "",
+    "size": 0,
+    "started_at": "2026-11-25T17:18:05Z",
+    "state": "success",
+    "view": "full"
+  }
+]
