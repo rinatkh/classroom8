@@ -101,4 +101,14 @@ bench: bench-all ## БЕНЧМАРКИ | Псевдоним bench-all
 bench-smoke: ## ТЕСТЫ | Один вызов всех benchmark-сценариев, без оценки скорости
 	$(MAKE) --no-print-directory bench-all BENCHTIME=1x BENCHCOUNT=1 BENCHCPU=1
 
-.PHONY: fmt fmt-check vet compile test-unit test-race coverage clean help deps-check mod-check test test-integration run-all run-01_linkedlist run-02_stack run-03_queue run-04_buffer run-05_ringbuffer run-06_hashtable run-07_visualizations build package coverage-check ci bench-list bench-stack bench-queue bench-hash bench-buffer bench-memory bench-list-raw bench-stack-raw bench-queue-raw bench-hash-raw bench-buffer-raw bench-memory-raw bench-all bench-all-raw bench bench-smoke
+git-check-push: ## GIT | Сравнить HEAD с веткой origin, без отправки и изменения refs
+	@set -e; \
+	branch="$$(git symbolic-ref --quiet --short HEAD)" || { echo "Нужна текущая ветка (HEAD detached)." >&2; exit 1; }; \
+	local_sha="$$(git rev-parse HEAD)"; \
+	remote_line="$$(git ls-remote --exit-code origin "refs/heads/$$branch")" || { echo "Не удалось проверить ветку на origin." >&2; exit 1; }; \
+	remote_sha="$$(printf '%s\n' "$$remote_line" | awk '{print $$1}')"; \
+	printf 'Ветка: %s\nHEAD:   %s\norigin: %s\n' "$$branch" "$$local_sha" "$$remote_sha"; \
+	if [ "$$local_sha" = "$$remote_sha" ]; then echo "SHA совпадают: эта вершина есть на origin."; \
+	else echo "SHA различаются. Проверьте историю и результат push." >&2; exit 1; fi
+
+.PHONY: fmt fmt-check vet compile test-unit test-race coverage clean help deps-check mod-check test test-integration run-all run-01_linkedlist run-02_stack run-03_queue run-04_buffer run-05_ringbuffer run-06_hashtable run-07_visualizations build package coverage-check ci bench-list bench-stack bench-queue bench-hash bench-buffer bench-memory bench-list-raw bench-stack-raw bench-queue-raw bench-hash-raw bench-buffer-raw bench-memory-raw bench-all bench-all-raw bench bench-smoke git-check-push
